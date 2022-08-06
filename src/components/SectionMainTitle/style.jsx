@@ -73,7 +73,7 @@ const H3 = styled.h3`
 
   @media (min-width: 1024px) {
     padding: 0;
-    width: 50%;
+    width: 70%;
     font-size: 1.8rem;
   }
 `;

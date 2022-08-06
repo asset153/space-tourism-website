@@ -6,7 +6,7 @@ import ButtonExplore from "../ButtonExplore/ButtonExplore";
 const App = () => {
   return (
     <S.Main>
-      <S.GlobalStyle />
+      {/* <S.GlobalStyle /> */}
       <Header />
       <SectionMainTitle />
       <ButtonExplore />

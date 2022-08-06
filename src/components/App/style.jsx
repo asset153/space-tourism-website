@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     list-style: none;
+    text-decoration: none;
+    color: white;
   }
 
   :root {
@@ -17,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${FONTS.font_family_barlow_condesed};
     color: ${COLORS.white};
 
-    @media (min-width: 1980px) {
+    @media (min-width: 1440px) {
     background-color: ${COLORS.dark_purple};
   } 
   }
@@ -28,7 +30,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1980px;
+  max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
   height: auto;

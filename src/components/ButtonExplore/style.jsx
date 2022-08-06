@@ -11,6 +11,7 @@ const Button = styled.button`
   border-radius: 50%;
   border: none;
   background-color: ${COLORS.white};
+  color: #000;
   transition: box-shadow 0.2s linear;
   cursor: pointer;
 
@@ -26,8 +27,10 @@ const Button = styled.button`
   }
 
   @media (min-width: 1024px) {
+    width: 27rem;
+    height: 27rem;
     grid-area: button;
-    margin-right: 8rem;
+    margin-right: 17rem;
   }
 `;
 

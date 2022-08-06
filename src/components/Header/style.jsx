@@ -7,7 +7,6 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* background-color: orange; */
 
   @media (min-width: 768px) {
   }
@@ -68,6 +67,7 @@ const Nav = styled.nav`
   }
 
   @media (min-width: 1024px) {
+    z-index: 998;
   }
 `;
 
@@ -95,7 +95,7 @@ const Ul = styled.ul`
   }
 
   @media (min-width: 1024px) {
-    padding-right: 8rem;
+    justify-content: center;
   }
 `;
 
@@ -144,6 +144,10 @@ const Span = styled.span`
   @media (min-width: 768px) {
     display: none;
   }
+
+  @media (min-width: 1024px) {
+    display: inline-block;
+  }
 `;
 
 const Main_Logo = styled.div`
@@ -152,10 +156,30 @@ const Main_Logo = styled.div`
   background-image: url(${logo});
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
   border-radius: 50%;
 
   @media (min-width: 768px) {
     margin-left: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    ::before {
+      content: "";
+      display: block;
+      width: 47rem;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 10rem;
+      transform: translateY(-50%);
+      background-color: #fff;
+      z-index: 999;
+
+      @media (max-width: 1280px) {
+        width: calc(47rem / 1.5);
+      }
+    }
   }
 `;
 
