@@ -29,36 +29,40 @@ const Destination = () => {
             <img src={item.images.webp} alt="moon-image" />
           </S.ContainerImage>
 
-          <S.ContainerButtons>
-            <button onClick={() => handleClickChoosePlanets("Moon")}>
-              Moon
-            </button>
+          <S.ContainerInformationAboutPlanet>
+            <S.ContainerButtons>
+              <button onClick={() => handleClickChoosePlanets("Moon")}>
+                Moon
+              </button>
 
-            <button onClick={() => handleClickChoosePlanets("Mars")}>
-              Mars
-            </button>
+              <button onClick={() => handleClickChoosePlanets("Mars")}>
+                Mars
+              </button>
 
-            <button onClick={() => handleClickChoosePlanets("Europa")}>
-              Europa
-            </button>
+              <button onClick={() => handleClickChoosePlanets("Europa")}>
+                Europa
+              </button>
 
-            <button onClick={() => handleClickChoosePlanets("Titan")}>
-              Titan
-            </button>
-          </S.ContainerButtons>
+              <button onClick={() => handleClickChoosePlanets("Titan")}>
+                Titan
+              </button>
+            </S.ContainerButtons>
 
-          <S.PlanetName>{item.name}</S.PlanetName>
-          <S.PlanetDescription>{item.description}</S.PlanetDescription>
+            <S.PlanetName>{item.name}</S.PlanetName>
+            <S.PlanetDescription>{item.description}</S.PlanetDescription>
 
-          <S.ContainerDistance>
-            <p>avg. distance</p>
-            <span>{item.distance}</span>
-          </S.ContainerDistance>
+            <S.ContainerDistanceAndTravelTime>
+              <S.ContainerDistance>
+                <p>avg. distance</p>
+                <span>{item.distance}</span>
+              </S.ContainerDistance>
 
-          <S.ContainerTravelTime>
-            <p>est. travel time</p>
-            <span>{item.travel}</span>
-          </S.ContainerTravelTime>
+              <S.ContainerTravelTime>
+                <p>est. travel time</p>
+                <span>{item.travel}</span>
+              </S.ContainerTravelTime>
+            </S.ContainerDistanceAndTravelTime>
+          </S.ContainerInformationAboutPlanet>
         </S.Article>
       );
     });
