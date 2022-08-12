@@ -7,8 +7,6 @@ const Destination = () => {
   const [planet, setPlanet] = useState("Moon");
   const { destinations } = useContext(Context);
 
-  console.log(destinations);
-
   const handleClickChoosePlanets = function (planet) {
     return setPlanet(planet);
   };
