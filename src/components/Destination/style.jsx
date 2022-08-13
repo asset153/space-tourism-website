@@ -34,7 +34,7 @@ const Article = styled.article`
       "title title"
       "images info";
 
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 `;
 

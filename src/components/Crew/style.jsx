@@ -49,8 +49,10 @@ const Article = styled(ArticleFromDestination)`
     display: grid;
     grid-template-areas:
       "descr img"
-      "descr img"
       "btns img";
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+    margin-left: 4rem;
   }
 `;
 
@@ -63,6 +65,7 @@ const ContainerImage = styled(ContainerImageFromDestination)`
 
   @media (min-width: 1024px) {
     grid-area: img;
+    width: 70%;
   }
 `;
 
@@ -88,6 +91,7 @@ const ContainerButtons = styled.div`
   @media (min-width: 1024px) {
     grid-area: btns;
     justify-content: flex-start;
+    padding: 0;
   }
 
   & > button {
@@ -95,8 +99,8 @@ const ContainerButtons = styled.div`
     background-color: white;
     border: none;
     opacity: 0.5;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
 
     &:hover {
@@ -140,6 +144,10 @@ const CrewDescription = styled(PlanetDescription)`
 
   @media (min-width: 768px) {
     width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.8rem;
   }
 `;
 

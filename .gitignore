@@ -26,3 +26,6 @@ dist-ssr
 *.sketch
 *.fig
 *.xd
+
+# Local Netlify folder
+.netlify
