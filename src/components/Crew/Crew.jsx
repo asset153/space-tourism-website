@@ -15,44 +15,43 @@ const Crew = () => {
     ?.filter((element) => element.name === crew)
     .map((element) => {
       return (
-        <S.Article key={element.name}>
+        <>
           <S.ContainerTitle>
             <h4>
               <span>02</span>
               <p>Meet your crew</p>
             </h4>
           </S.ContainerTitle>
+          <S.Article key={element.name}>
+            <S.ContainerImage>
+              <img src={element.images.webp} alt="moon-image" />
+            </S.ContainerImage>
 
-          <S.ContainerImage>
-            <img src={element.images.webp} alt="moon-image" />
-          </S.ContainerImage>
-
-          <S.ContainerInformationAboutCrew>
             <S.ContainerButtons>
-              <button onClick={() => handleClickChooseCrews("Douglas Hurley")}>
-                Moon
-              </button>
+              <button
+                onClick={() => handleClickChooseCrews("Douglas Hurley")}
+              ></button>
 
               <button
                 onClick={() => handleClickChooseCrews("Mark Shuttleworth")}
-              >
-                Mars
-              </button>
+              ></button>
 
-              <button onClick={() => handleClickChooseCrews("Victor Glover")}>
-                Europa
-              </button>
+              <button
+                onClick={() => handleClickChooseCrews("Victor Glover")}
+              ></button>
 
-              <button onClick={() => handleClickChooseCrews("Anousheh Ansari")}>
-                Titan
-              </button>
+              <button
+                onClick={() => handleClickChooseCrews("Anousheh Ansari")}
+              ></button>
             </S.ContainerButtons>
 
-            <S.CrewRole>{element.role}</S.CrewRole>
-            <S.CrewName>{element.name}</S.CrewName>
-            <S.CrewDescription>{element.bio}</S.CrewDescription>
-          </S.ContainerInformationAboutCrew>
-        </S.Article>
+            <S.ContainerInformationAboutCrew>
+              <S.CrewRole>{element.role}</S.CrewRole>
+              <S.CrewName>{element.name}</S.CrewName>
+              <S.CrewDescription>{element.bio}</S.CrewDescription>
+            </S.ContainerInformationAboutCrew>
+          </S.Article>
+        </>
       );
     });
   console.log(crews);

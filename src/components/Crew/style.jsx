@@ -19,6 +19,7 @@ const Section = styled(Main)`
 
   @media (min-width: 768px) {
     background-image: url(${tabletCrewBackground});
+    justify-content: space-between;
   }
 
   @media (min-width: 1024px) {
@@ -29,11 +30,81 @@ const Section = styled(Main)`
   }
 `;
 
-const Article = styled(ArticleFromDestination)``;
-const ContainerImage = styled(ContainerImageFromDestination)``;
-const ContainerInformationAboutCrew = styled(ContainerInformationAboutPlanet)``;
-const ContainerTitle = styled(ContainerTitleFromDestination)``;
-const ContainerButtons = styled(ContainerButtonsFromDestination)``;
+const ContainerTitle = styled(ContainerTitleFromDestination)`
+  & > h4 {
+    @media (min-width: 768px) {
+      font-size: 2rem;
+      letter-spacing: 3.4px;
+    }
+  }
+`;
+
+const Article = styled(ArticleFromDestination)`
+  @media (min-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-areas:
+      "descr img"
+      "descr img"
+      "btns img";
+  }
+`;
+
+const ContainerImage = styled(ContainerImageFromDestination)`
+  & > img {
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    grid-area: img;
+  }
+`;
+
+const ContainerInformationAboutCrew = styled(ContainerInformationAboutPlanet)`
+  @media (min-width: 1024px) {
+    grid-area: descr;
+  }
+`;
+
+const ContainerButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid ${COLORS.light_purple};
+  opacity: 0.5;
+  width: 100%;
+  padding: 2rem 0;
+
+  @media (min-width: 768px) {
+    border-top: none;
+  }
+
+  @media (min-width: 1024px) {
+    grid-area: btns;
+    justify-content: flex-start;
+  }
+
+  & > button {
+    margin: 1rem;
+    background-color: white;
+    border: none;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+`;
 
 const CrewName = styled(PlanetName)`
   font-size: 2.4rem;
@@ -51,6 +122,7 @@ const CrewName = styled(PlanetName)`
 const CrewRole = styled(CrewName)`
   font-size: 1.6rem;
   opacity: 0.5;
+  margin: 0.5rem 0 1rem 0;
 
   @media (min-width: 768px) {
     font-size: 2.4rem;
@@ -63,6 +135,12 @@ const CrewRole = styled(CrewName)`
 
 const CrewDescription = styled(PlanetDescription)`
   font-family: ${FONTS.font_family_barlow_condesed};
+  width: 75%;
+  line-height: 1.75;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export {
