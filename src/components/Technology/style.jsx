@@ -33,6 +33,7 @@ const Article = styled.article`
       "title title title"
       "btns descr img";
     margin-left: 8rem;
+    margin-top: 5rem;
   }
 `;
 
