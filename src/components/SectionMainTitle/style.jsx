@@ -57,7 +57,7 @@ const H2 = styled.h2`
 `;
 
 const H3 = styled.h3`
-  margin-bottom: 25rem;
+  margin-bottom: 10rem;
   font-family: ${FONTS.font_family_barlow_condesed};
   font-size: 1.5rem;
   line-height: 1.5;

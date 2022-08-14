@@ -5,7 +5,9 @@ import tabletTechnologyBackground from "../../assets/technology/background-techn
 import desktopTechnologyBackground from "../../assets/technology/background-technology-desktop.jpg";
 
 const Section = styled.section`
+  max-width: 1440px;
   min-height: 100vh;
+  margin: 0 auto;
   background-image: url(${mobileTechnologyBackground});
   background-repeat: no-repeat;
   background-position: center;
@@ -39,13 +41,13 @@ const Header = styled.header`
 
   @media (min-width: 768px) {
     align-self: flex-start;
+    margin-top: 4rem;
+    margin-left: 2rem;
   }
 
   @media (min-width: 1024px) {
     grid-area: title;
     margin: 0;
-    margin-top: 4rem;
-    margin-left: 2rem;
   }
 
   & > h4 {
@@ -87,6 +89,7 @@ const Buttons = styled.div`
   @media (min-width: 1024px) {
     flex-direction: column;
     grid-area: btns;
+    padding-right: 4rem;
   }
 
   & > button {
@@ -99,17 +102,20 @@ const Buttons = styled.div`
     border: 1px solid ${COLORS.light_purple};
     border-radius: 50%;
     background-color: transparent;
-    font-size: 3.2rem;
+    font-size: 1.6rem;
+    font-family: ${FONTS.font_family_bellefair};
 
     @media (min-width: 768px) {
       width: 60px;
       height: 60px;
       margin: 2rem;
+      font-size: 2.4rem;
     }
 
     @media (min-width: 1024px) {
       width: 80px;
       height: 80px;
+      font-size: 3.2rem;
     }
 
     &:hover {
@@ -124,14 +130,21 @@ const ContainerDescriptionTechnology = styled.div`
   text-align: center;
   padding: 0 2rem;
 
+  @media (min-width: 768px) {
+    padding-bottom: 4rem;
+    width: 75%;
+  }
+
   @media (min-width: 1024px) {
     grid-area: descr;
     text-align: start;
+    min-width: 350px;
   }
 
   & > h5 {
     font-size: 1.4rem;
     letter-spacing: 2.4px;
+    color: ${COLORS.light_purple};
 
     @media (min-width: 768px) {
       font-size: 1.6rem;
@@ -165,7 +178,6 @@ const ContainerDescriptionTechnology = styled.div`
 
     @media (min-width: 1024px) {
       font-size: 1.8rem;
-      width: 75%;
     }
   }
 `;
