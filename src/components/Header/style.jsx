@@ -38,7 +38,6 @@ const Nav = styled.nav`
   right: 0;
   bottom: 0;
   padding: 4rem 2rem;
-  /* background-color: rgba(0, 0, 0, 0.1); */
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   animation: hidden 0.5s 1;

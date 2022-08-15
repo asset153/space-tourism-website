@@ -13,8 +13,16 @@ const Section = styled.section`
   background-position: center;
   background-size: cover;
 
+  > header {
+    padding: 2rem;
+  }
+
   @media (min-width: 768px) {
     background-image: url(${tabletTechnologyBackground});
+
+    > header {
+      padding: 0;
+    }
   }
 
   @media (min-width: 1024px) {

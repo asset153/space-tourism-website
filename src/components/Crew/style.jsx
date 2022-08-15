@@ -27,6 +27,11 @@ const Section = styled(Main)`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    > header {
+      margin: 0;
+      padding: 0;
+    }
   }
 `;
 
@@ -53,19 +58,27 @@ const Article = styled(ArticleFromDestination)`
     grid-template-columns: 1fr 1fr;
     margin-bottom: 0;
     margin-left: 4rem;
+    margin-top: 4rem;
   }
 `;
 
 const ContainerImage = styled(ContainerImageFromDestination)`
   & > img {
     @media (min-width: 768px) {
+      width: 540px;
+      height: 532px;
+      /* width: 75%; */
+    }
+
+    @media (min-width: 1024px) {
+      /* width: 570px;
+      height: 712px; */
       width: 100%;
     }
   }
 
   @media (min-width: 1024px) {
     grid-area: img;
-    width: 70%;
   }
 `;
 
